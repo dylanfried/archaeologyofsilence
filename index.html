@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kehinde Wiley: An Archaeology of Silence</title>
+</head>
+<body>
+    <div class="intro" onclick="showMap()">
+        kehinde wiley / an archaeology of silence
+    </div>
+    <div class="map-container" id="mapContainer">
+        <div class="image-container">
+            <div class="aspect-ratio">
+                <!-- Placeholder for points of interest -->
+                <!-- Each div has an onclick to open modal, data-image to hold image URL and data-audio for MP3 if exists -->
+                <div class="point" data-id="1" data-image="images/1.jpg" data-audio="sounds/1.mp3" data-title="intro" data-sub-title="" style="top: 60%; left: 74%;" onclick="openModal(this)">1</div>
+                <div class="point" data-id="2" data-image="images/2.jpg" data-audio="sounds/2.mp3" data-title="Dying Gaul" data-sub-title="Roman 1st Century / 2022 / bronze"style="top: 53%; left: 69%;" onclick="openModal(this)">2</div>
+                <div class="point" data-id="3" data-image="images/3.png" data-audio="sounds/3.mp3" data-title="Femme piquée par un serpent (Mamadou Gueye)" data-sub-title="2022 / painting" style="top: 48%; left: 73%;" onclick="openModal(this)">3</div>
+                <div class="point" data-id="4" data-image="images/4.jpg" data-title="view into transcendence of light" data-sub-title="" style="top: 14%; left: 47%;" onclick="openModal(this)">4</div>
+                <div class="point" data-id="5" data-image="images/5b.jpg" data-audio="sounds/5.mp3" data-title="Young Tarentine II (Ndeye Fatou Mbaye)" data-sub-title="2022 / painting" style="top: 14%; left: 54%;" onclick="openModal(this)">5</div>
+                <div class="point" data-id="6" data-image="images/6b.png" data-audio="sounds/6.mp3" data-title="Christian Martyr Tarcisius (El Hadji Malick Gueye)" data-sub-title="2022 / painting" style="top: 4%; left: 49%;" onclick="openModal(this)">6</div>
+                <div class="point" data-id="7" data-image="images/7.jpg" data-title="view into the importance of scale" data-sub-title="" style="top: 14%; left: 44%;" onclick="openModal(this)">7</div>
+                <div class="point" data-id="8" data-image="images/8.jpg" data-audio="sounds/8.mp3" data-title="The Body of the Dead Christ in the Tomb (Babacar Mané)" data-sub-title="2022 / bronze" style="top: 7%; left: 35%;" onclick="openModal(this)">8</div>
+                <div class="point" data-id="9" data-image="images/9.webp" data-audio="sounds/9.mp3" data-title="Young Tarantine (Mamadou Gueye)" data-sub-title="2022 / bronze" style="top: 14%; left: 23%;" onclick="openModal(this)">9</div>
+                <div class="point" data-id="10" data-image="images/10.png" data-audio="sounds/10.mp3" data-title="The Virgin Martyr Cecilia (Ndey Buri)" data-sub-title="2022 / painting" style="top: 24%; left: 27%;" onclick="openModal(this)">10</div>
+                <div class="point" data-id="11" data-image="images/11.jpeg" data-audio="sounds/11.mp3" data-title="The Death of Hyacinth (Ndey Buri Mboup)" data-sub-title="2022 / painting" style="top: 43%; left: 46%;" onclick="openModal(this)">11</div>
+                <div class="point" data-id="12" data-image="images/12.jpg" data-audio="sounds/12.mp3" data-title="Youth Mourning" data-sub-title="2022 / bronze" style="top: 47%; left: 41%;" onclick="openModal(this)">12</div>
+                <div class="point" data-id="13" data-image="images/13.jpg" data-title="view into an archaeology of silence" data-sub-title="" style="top: 52%; left: 38.1%;" onclick="openModal(this)">13</div>
+                <div class="point" data-id="14" data-image="images/14.jpg" data-audio="sounds/14.mp3" data-title="An Archaeology of Silence" data-sub-title="2022 / bronze" style="top: 66%; left: 38.1%;" onclick="openModal(this)">14</div>
+
+                <!-- Modal for point details -->
+                <!--<div class="modal" id="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="pointImage" src="" alt="Point of Interest">
+                    <audio id="pointAudio" controls autoplay></audio>
+                </div>-->
+
+                <div class="modal" id="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    
+                    <div class="content-container">
+                        <img id="pointImage" src="" alt="Point of Interest">
+                        
+                        <div class="text-container">
+                            <div id="pointTitle" class="title">Bolded Title</div>
+                            <div id="pointSubTitle" class="subtitle">Non-Bolded Sub-title</div>
+                        </div>
+                    </div>
+                    
+                    <audio id="pointAudio" controls autoplay></audio>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
